@@ -1,48 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <script>
-        // 寫法1(巢狀檢查)
-        // var a = "amin";
-        // var b = "1234";
+      // 寫法1(巢狀檢查)
+      // var a = "amin";
+      // var b = "1234";
 
-        // if (a == "admin") {
-        //     if (b == "1234") {
-        //         console.log("帳密正確");
-        //     } else {
+      // if (a == "admin") {
+      //     if (b == "1234") {
+      //         console.log("帳密正確");
+      //     } else {
 
-        //         console.log("密碼錯誤");
-        //     }
-        // } else {
-        //     if (b == "1234") {
-        //         console.log("帳號錯誤");
-        //     } else {
-        //         console.log("帳密錯誤")
-        //     }
-        // }
+      //         console.log("密碼錯誤");
+      //     }
+      // } else {
+      //     if (b == "1234") {
+      //         console.log("帳號錯誤");
+      //     } else {
+      //         console.log("帳密錯誤")
+      //     }
+      // }
 
-        // 寫法2:邏輯運算中的交集(and)=>&&
-        var a = "admin";
-        var b = "234";
+      // 寫法2:邏輯運算中的交集(and)=>&&
+      var a = "admin";
+      var b = "234";
 
-        if ((a == "admin") && (b == "1234")) {
-            console.log("帳號正確");
-        } else if ((a == "admin") && (b !== "1234")) {
-            console.log("密碼錯誤");
-        } else if ((a !== "admin") && (b == "1234")) {
-            console.log("帳號錯誤");
-        } else if ((a !== "admin") && (b !== "1234")) {
-            console.log("帳密錯誤");
-        }
-
+      if (a == "admin" && b == "1234") {
+        console.log("帳號正確");
+      } else if (a == "admin" && b !== "1234") {
+        console.log("密碼錯誤");
+      } else if (a !== "admin" && b == "1234") {
+        console.log("帳號錯誤");
+      } else if (a !== "admin" && b !== "1234") {
+        console.log("帳密錯誤");
+      }
+      123;
     </script>
-</body>
-
+  </body>
 </html>
