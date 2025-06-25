@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 方法1
+        //  跟2相除取餘數(1=>奇數,2=>偶數)
+        var number = 134;
+        if (number % 2 == 0) {
+            console.log(`${number}是偶數`);
+        } else {
+            console.log(`${number}是奇數`);
+        }
+
+        //另一種寫法:把重複部分獨立出來
+        var num2 = 10;
+        var result = "偶數";
+
+        if (num2 % 2 == 1) {
+            // 指派(給值)
+            result = "奇數";
+        }
+        console.log(`${num2}是${result}`);
+
+    </script>
+</body>
+
+</html>
