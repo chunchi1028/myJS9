@@ -6,13 +6,12 @@
     <title>Document</title>
   </head>
   <body>
+    <p id="demo">Javascript can change the character size</p>
+    <button onclick="btnClick()">Click Me!</button>
     <script>
-      //3+2=5
-      // document.write('3+2=');
-      // document.write(3+2);
-
-      // 合併
-      // document.write('3+2='+(3+2));
+      function btnClick() {
+        document.getElementById("demo").style.fontSize = "35px";
+      }
     </script>
   </body>
 </html>

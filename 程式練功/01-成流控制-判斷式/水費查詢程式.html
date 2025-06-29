@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var water = "";
+      water = prompt("請輸入用水度數");
+      if (water <= 10 && water >= 1) {
+        console.log(`${water * 7.35}`);
+      } else if (water <= 30 && water >= 11) {
+        console.log(`${water * 9.45}`);
+      } else if (water <= 50 && water >= 31) {
+        console.log(`${water * 11.55}`);
+      } else if (water > 50) {
+        console.log(`${water * 12.075}`);
+      }
+    </script>
+  </body>
+</html>
