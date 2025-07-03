@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 九九乘法表
+        for (var i = 1; i <= 9; i++) {
+            for (var j = 1; j <= 9; j++) {
+
+                document.write(`${i}*${j}=`);
+                if (i * j < 10) {
+                    document.write("0")
+                }
+                document.write(`${i * j}&nbsp;&nbsp;&nbsp;`);
+// &nbsp; =>HTML空白符號(建議)
+            }
+            document.write("<br>");
+        }
+// 因為網頁不允許連續多個半形空白
+// 所以連續多個空白會視為一個
+// 若要多個空白的話，可以使用全形空白(shift+空白)
+    </script>
+</body>
+
+</html>

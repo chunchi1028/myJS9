@@ -1,21 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <script>
-      var a = 3; //種類
-      var b = 2; //張數
-      if (a == 1) {
-        console.log(`全票${b}張，票價為:${500 * b}元`);
-      } else if (a == 2) {
-        console.log(`優待票${b}張，票價為:${500 * 0.8 * b}元`);
-      } else if (a == 3) {
-        console.log(`敬老票${b}張，票價為:${500 * 0.8 * 0.7 * b}元`);
-      }
-    </script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var a = 3; //種類
+    var b = 2; //張數
+    if (a == 1) {
+      console.log(`全票${b}張，票價為:${500 * b}元`);
+    } else if (a == 2) {
+      console.log(`優待票${b}張，票價為:${500 * 0.8 * b}元`);
+    } else if (a == 3) {
+      console.log(`敬老票${b}張，票價為:${500 * 0.8 * 0.7 * b}元`);
+    } else {
+
+      console.log("err!票種類別不存在");
+    }
+
+
+    // 另一種寫法
+    var ticketType = 5;        //預設種類是全票
+    var ticketNum = 2;         //票價張數
+    var ticketPrice = "";      //預設價格
+    var ticketName = "全票";   //票價名稱
+    var errFlag = "N";         //存放是否錯誤(識別變數)
+
+
+    switch (ticketType) {
+      default:
+        console.log("err!票種類別不存在");
+        errFlag = "Y";
+        break;
+      case 1:
+        ticketPrice = 500;
+        ticketName = "全票";
+        break;
+      case 2:
+        ticketPrice = 500 * 0.8;
+        ticketName = "優待票";
+        break;
+      case 3:
+        ticketPrice = 500 * 0.8 * 0.7;
+        ticketName = "敬老票";
+        break;
+
+    }
+    if (errFlag == "N") {
+      console.log(`${ticketName}${ticketNum}張,票價為:${ticketNum * ticketPrice}`);
+
+    }
+
+
+
+
+
+
+  </script>
+</body>
+
 </html>
