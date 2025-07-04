@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- label:標籤 -->
+    <label for="n1">數值1</label>
+    <!-- 文字方塊 -->
+    <input type="number" id="n1">
+    <br> <br>
+    <button onClick="btn1()">+</button>
+    <button onClick="btn2()">-</button>
+    <button onClick="btn3()">*</button>
+    <button onClick="btn4()">/</button>
+    <br> <br>
+    <label for="n2">數值2</label>
+    <input type="number" id="n2">
+
+    <br>
+    <p id="result">合計結果</p>
+    <script>
+        function btn1() {
+            var n1 = document.getElementById("n1");
+            var n2 = document.getElementById("n2");
+            document.getElementById("result").textContent = parseInt(n1.value) + parseInt(n2.value);
+        }
+        function btn2() {
+            var n1 = document.getElementById("n1");
+            var n2 = document.getElementById("n2");
+            document.getElementById("result").textContent = parseInt(n1.value) - parseInt(n2.value);
+        }
+        function btn3() {
+            var n1 = document.getElementById("n1");
+            var n2 = document.getElementById("n2");
+            document.getElementById("result").textContent = parseInt(n1.value) * parseInt(n2.value);
+        }
+        function btn4() {
+            var n1 = document.getElementById("n1");
+            var n2 = document.getElementById("n2");
+            document.getElementById("result").textContent = parseInt(n1.value) / parseInt(n2.value);
+
+        }
+
+        // 簡化的寫法
+        var n1 = document.getElementById("n1");
+        var n2 = document.getElementById("n2");
+        var resul = document.getElementById("result")
+        function btn1() {
+            result.textContent = parseInt(n1.value) + parseInt(n2.value);
+        }
+        function btn2() {
+            result.textContent = parseInt(n1.value) - parseInt(n2.value);
+        }
+        function btn3() {
+            result.textContent = parseInt(n1.value) * parseInt(n2.value);
+        }
+        // 取小數位=> toFixed(填寫要取到第幾個小數位)
+        function btn4() {
+            result.textContent =( parseInt(n1.value) / parseInt(n2.value)).toFixed(2);
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>
