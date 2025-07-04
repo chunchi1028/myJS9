@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var rd = Math.random() * 100;
+        var a = (Math.floor(rd) + 1);
+        do {
+            var num = prompt("請輸入數字，來猜猜看數字吧!");
+            if (num == a) {
+                alert("你好棒，猜對了~");
+            }
+
+            if (num > a) {
+             alert(`太大了，小提示:${a - 10}~${a + 10}`);
+             continue;
+                }
+
+
+
+
+
+
+             if (num < a) {
+                alert(`太小了，小提示:${a - 10}~${a + 10}`);
+                continue;
+                }
+            
+        } while (1);
+    </script>
+</body>
+
+</html>
