@@ -27,9 +27,6 @@
           if (guess > a) a = guess;
           continue;
         } else if (guess > ans) {
-          if (guess + 10 > 100) {
-            result = Math.min(guess + 10, 100);
-          }
           c++;
           alert(`第${c}次:${guess}=>太大了，小提示:${a}~${guess}`);
           if (guess < b) b = guess;
