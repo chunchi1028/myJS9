@@ -1,39 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <script>
-        var rd = Math.random() * 100;
-        var a = (Math.floor(rd) + 1);
-        do {
-            var num = prompt("請輸入數字，來猜猜看數字吧!");
-            if (num == a) {
-                alert("你好棒，猜對了~");
-            }
+      let ans = Math.floor(Math.random() * 100) + 1;
 
-            if (num > a) {
-             alert(`太大了，小提示:${a - 10}~${a + 10}`);
-             continue;
-                }
+      var a = 1; //最小值
+      var b = 100; //最大值
+      var c = 0; //執行次數
 
+      while (1) {
+        var guess = prompt("請輸入數字，來猜猜看數字吧!");
+        if (guess == ans) {
+          alert("你好棒，猜對了~");
+          break;
+        }
 
-
-
-
-
-             if (num < a) {
-                alert(`太小了，小提示:${a - 10}~${a + 10}`);
-                continue;
-                }
-            
-        } while (1);
+        if (guess < ans) {
+          c++;
+          alert(`第${c}次:${guess}=>太小了，小提示:${guess}~${b}`);
+          if (guess > a) a = guess;
+          continue;
+        } else if (guess > ans) {
+          c++;
+          alert(`第${c}次:${guess}=>太大了，小提示:${a}~${guess}`);
+          if (guess < b) b = guess;
+          continue;
+        }
+      }
     </script>
-</body>
-
+  </body>
 </html>
