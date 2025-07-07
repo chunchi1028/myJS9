@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>陣列</h2>
+
+    <script>
+        // 建立一個陣列,在放任一N個職
+        let arr1 = [10, 200, 30];
+        console.log("尚未排序前" + arr1);
+
+        // 遞增排序
+        // 使用箭頭函示寫法
+        arr1.sort((a, b) => {
+            return a - b;
+
+        })
+        console.log("遞增排序後" + arr1);
+
+        // 遞減的話
+        arr1.sort((a, b) => {
+            return b - a;
+
+        })
+        console.log("遞減排序後" + arr1);
+
+
+
+        // 使用迴圈,顯示診列中的內容
+        //     for (let i = 0; i < arr1.length; i++) {
+        //         console.log(arr1[i])
+        //     }
+        // </script>
+</body>
+
+</html>
