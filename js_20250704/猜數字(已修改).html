@@ -25,12 +25,12 @@
           c++;
           alert(`第${c}次:${guess}=>太小了，小提示:${guess}~${b}`);
           if (guess > a) a = guess;
-          continue;
+          continue; //可不寫
         } else if (guess > ans) {
           c++;
           alert(`第${c}次:${guess}=>太大了，小提示:${a}~${guess}`);
           if (guess < b) b = guess;
-          continue;
+          continue; //可不寫
         }
       }
     </script>
