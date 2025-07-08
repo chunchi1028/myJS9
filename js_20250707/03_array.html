@@ -8,40 +8,18 @@
 </head>
 
 <body>
-    <h2>顯示陣列中所有資料的方法</h2>
-
     <script>
-        let arr1 = [1, 2, 3, 4, 5, "12345"];
+        // 建立一個陣列，再放任意N個值
+        let arr1 = [10, 200, 30];
+        console.log(`尚未排序前:${arr1}`);
 
-        // 方法1:for
-        for (let i = 0; i < arr1.length; i++) {
-            console.log(arr1[i]);
-        }
-
-        // 方法2:for of
-        // 語法
-        /*
-        for(let 變數 of 陣列名稱){
-        ......
-        } 
-        */
-        console.log("for--of--");
-        for (let n of arr1) {
-            console.log(n);
-        }
-
-        // 方法3:forEach
-        // 語法
-        /*
-       陣列名稱.forEach((變數)=>{
-       ......
+        // 使用箭頭函式寫法
+        arr1.sort((a, b) => {
+            // 遞增排序
+            return a - b;
+            // 遞減排序
+            return b - a;
         })
-
-        */
-       console.log("forEach------");
-       arr1.forEach((n)=>{
-        console.log(n);
-       })
     </script>
 </body>
 
