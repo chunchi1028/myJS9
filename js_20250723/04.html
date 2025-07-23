@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 建立一個名稱為User函式作為物件的樣板，內有name與age二個屬性，showMsg()方法
+        // 字首大寫
+
+        function User(myname, myage,myH,myW) {
+            this.name = myname;
+            this.age = myage;
+            this.height = myH;
+            this.weight = myW;
+
+            this.showBMI=function(){
+                let BMI=(myW/Math.pow(myH/100,2)).toFixed(3);
+                return BMI;
+            }
+        }
+
+        // 使用物件樣板，必須使用new關鍵字
+        let user1 = new User('vivi', 20, 150, 41);
+        console.log(user1);
+        console.log(user1.showBMI());
+        let user2 = new User('cici', 25, 178, 50);
+        console.log(user2);
+        console.log(user2.showBMI());
+    </script>
+</body>
+
+</html>
