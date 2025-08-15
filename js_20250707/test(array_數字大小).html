@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr1 = [5, 60, 3, 90, 33, 1, 100];
+        let min = arr1[0];
+        let max = arr1[1];
+        // // for
+        for (let i = 0; i < arr1.length; i++) {
+            if (arr1[i] < min) min = arr1[i];
+            if (arr1[i] > max) max = arr1[i];
+        }
+        console.log(`最小值:${min},最大值:${max}`);
+
+        //for of
+        min = arr1[0];
+        max = arr1[1];
+        for (let n of arr1) {
+            if (n < min) min = n;
+            if (n > max) max = n;
+        }
+        console.log(`最小值:${min},最大值:${max}`);
+
+        // forEach
+        min = arr1[0];
+        max = arr1[1];
+
+        arr1.forEach((n) => {
+            if (n < min) min = n;
+            if (n > max) max = n;
+        })
+        console.log(`最小值:${min},最大值:${max}`);
+
+
+        // map
+
+        min = arr1[0];
+        max = arr1[1];
+        arr1.map((n) => {
+            if (n < min) min = n;
+            if (n > max) max = n;
+        })
+        console.log(`最小值:${min},最大值:${max}`);
+
+        // sort
+        arr1.sort((a, b) => {
+            return a - b;
+        })
+        console.log(`最小值:${arr1[0]},最大值:${arr1[arr1.length - 1]}`);
+
+        // 數學類別
+        // 最大值=>Math.max()
+        // 最小值=>Math.min()
+        max = Math.max(...arr1);
+        min = Math.min(...arr1);
+        console.log(`最小值:${min},最大值:${max}`);
+    </script>
+</body>
+
+</html>

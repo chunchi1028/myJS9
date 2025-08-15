@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 威力彩1~38取6,1~8取1
+        // 大樂透1~49取6,1~49取1
+        // 今彩  1~39取5
+        let arr1 = [];
+        let arr2 = [];
+        let arr3 = [];
+        let arr4 = [];
+        let arr5 = [];
+        // 威力彩
+        for (let i = 0; i < 6; i++) {
+            let random = Math.floor(Math.random() * 38) + 1;
+            arr1.push(random);
+        }
+        for (let i = 0; i < 1; i++) {
+            let random = Math.floor(Math.random() * 8) + 1;
+            arr2.push(random);
+        }
+
+        console.log(`威力彩未排序:${arr1}第二區:${arr2}`);
+        arr1.sort((a, b) => {
+            return a - b;
+        })
+        console.log(`威力彩遞增排序:${arr1}第二區:${arr2}`);
+
+        // 大樂透
+        for (let i = 0; i < 6; i++) {
+            let random = Math.floor(Math.random() * 49) + 1;
+            arr3.push(random);
+        }
+        for (let i = 0; i < 1; i++) {
+            let random = Math.floor(Math.random() * 49) + 1;
+            arr4.push(random);
+        }
+
+        console.log(`大樂透未排序:${arr3}第二區:${arr4}`);
+        arr3.sort((a, b) => {
+            return a - b;
+        })
+        console.log(`大樂透遞增排序:${arr3}第二區:${arr4}`);
+
+        // 今彩
+        for (let i = 0; i < 5; i++) {
+            let random = Math.floor(Math.random() * 39) + 1;
+            arr5.push(random);
+        }
+
+        console.log(`今彩未排序:${arr5}`);
+        arr5.sort((a, b) => {
+            return a - b;
+        })
+        console.log(`今彩遞增排序:${arr5}`);
+
+
+    </script>
+</body>
+
+</html>

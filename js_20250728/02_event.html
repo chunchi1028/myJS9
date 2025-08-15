@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 500px;
+            height:500px;
+        }
+    </style>
+</head>
+<body>
+    <img src="./images/cute-pet-collage-isolated.jpg" alt="" id="pic">
+    <script>
+        let pic=document.querySelector("#pic");
+        // 滑鼠碰到圖片時，換圖
+        pic.addEventListener('mouseover',()=>{
+            pic.src="./images/shot-three-adorable-siberian-husky-puppies-lying-together-isolated-white.jpg";
+        })
+        // 滑鼠離開圖片時，還原圖片
+        pic.addEventListener('mouseout',()=>{
+            pic.src="./images/cute-pet-collage-isolated.jpg";
+        })
+    </script>
+</body>
+</html>

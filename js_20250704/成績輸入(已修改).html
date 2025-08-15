@@ -41,24 +41,24 @@
                 alert("err!成績不能空白，請重新輸入");
                 continue;
             }
+            score = Number(score);
 
             if (score >= 60) {
                 a++;
             } else {
                 b++;
             }
-            score = Number(score);
             c = c + score;
-            d = c / (a + b);
-            var result = document.getElementById("result");
-            result.innerHTML = `
+
+        } while (1);
+        d = c / (a + b);
+        var result = document.getElementById("result");
+        result.innerHTML = `
             及格=>${a}人<br>
             不及格=>${b}人<br>
             總分=>${c}分<br>
             總平均=>${d}分<br>
             `;
-        } while (1);
-
 
 
     </script>

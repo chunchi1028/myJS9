@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <label for="URL">請選擇網站</label>
+        <!-- 下拉式清單 -->
+        <select name="" id="url">
+            <!-- 空連結表示法:網址後方不會有# -->
+            <option value="javascript:">請選擇</option>
+            <option value="https://www.google.com/?hl=zh_TW">goolge</option>
+            <option value="https://www.momoshop.com.tw/main/Main.jsp">momo</option>
+            <option value="https://shopee.tw/">蝦皮</option>
+        </select>
+
+        <script>
+            // 取得下拉式清單的位置
+            let url = document.querySelector('#url');
+
+
+            url.addEventListener('change', () => {
+                // 檢查更換後的value值長度是否大於0
+                if(url.value.length>0){
+                    let newWin = open(); //開新分頁
+                    newWin.location.href = url.value;
+
+                    // 不會開新分頁 直接原地開
+                    // location.href=url.value;
+
+                }
+            });
+        </script>
+    </form>
+</body>
+
+</html>
